@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <meta name="text:Google Analytics Code" content=""/>
+        <title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+    </head>
+    <body bgcolor="#000000" text="#FFFFFF" background="http://static.tumblr.com/uovukmx/xh9mhx0g1/stars-bb.gif">
+        <center><h1><a href="/" color="#FFFFFF" style='text-decoration:none; color: #ffffff'>{Title}</a></h1>
+
+        {block:Description}
+            <p><img src="{PortraitURL-128}"><br>{Description}</p>
+        {/block:Description}
+
+        {block:AskEnabled}
+            <a href="/ask"><img src="http://static.tumblr.com/uovukmx/sXYmhx13s/emailme.gif"> {AskLabel}</a>
+        {/block:AskEnabled}
+        </center>
+
+        
+            {block:Posts}
+            <table border=1 width=100%>
+            <tr>
+                <td width="200">{block:Date}<a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a>.{/block:Date}<br>
+                {NoteCount} Notes.
+                
+                    {block:NotReblog} 
+                    <p>
+                    <script>
+                        if ({NoteCount} > 100) {
+                            document.write('HOT POST<br><img src="http://static.tumblr.com/uovukmx/pVpmhx34t/fire.gif">');
+                        }
+                    </script>
+                    {/block:NotReblog} 
+            </td>
+                <td>
+
+
+                {block:Text}
+                    
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+                        {Body}
+                    
+                {/block:Text}
+
+                {block:Photo}
+                        <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" style='max-width: 600px;'>
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    
+                {/block:Photo}
+
+                {block:Panorama}
+
+                        {LinkOpenTag}
+                            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                        {LinkCloseTag}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+
+                {/block:Panorama}
+
+                {block:Photoset}
+
+                        {Photoset-500}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+
+                {/block:Photoset}
+
+                {block:Quote}
+
+                        <blockquote>{Quote}</blockquote>
+
+                        {block:Source}
+                            <div class="source">{Source}</div>
+                        {/block:Source}
+
+                {/block:Quote}
+
+                {block:Link}
+
+                        <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+
+                {/block:Link}
+
+                {block:Chat}
+
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+                        <ul class="chat">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}
+
+                                    {Line}
+                                </li>
+                            {/block:Lines}
+                        </ul>
+
+                {/block:Chat}
+
+                {block:Video}
+
+                        {Video-500}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+
+                {/block:Video}
+
+                {block:Audio}
+
+                        {AudioPlayerBlack}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+
+                {/block:Audio}
+            </td></tr>
+            <tr><td colspan=2>
+            {block:PermalinkPage} 
+            {block:PostNotes}
+            {PostNotes-16}
+            {/block:PostNotes}
+            {/block:PermalinkPage} 
+            </td></tr>
+            </table>
+            <br><br>
+            {/block:Posts}
+        
+
+        <p id="footer">
+            <center>
+            {block:PreviousPage}
+                <h2><a href="{PreviousPage}">&#171; Previous Page</a></h2>
+            {/block:PreviousPage}
+
+            {block:NextPage}
+                <h2><a href="{NextPage}">Next Page &#187;</a></h2>
+            {/block:NextPage}
+            <br><br>
+            <h3><a href="/archive">Archive</a></h3>
+            <a href="/"><img src="http://static.tumblr.com/uovukmx/cXumhx240/home.gif"></a>
+            </center>
+        </p>
+
+<!-- hitwebcounter Code START -->
+<a href="http://www.hitwebcounter.com/" target="_blank">
+<img src="http://hitwebcounter.com/counter/counter.php?page=4726123&style=0005&nbdigits=5&type=page&initCount=0" title="" Alt=""   border="0" >
+</a>
+{block:IfGoogleAnalyticsCode}
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{text:Google Analytics Code}']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+{/block:IfGoogleAnalyticsCode}
+    </body>
+</html>
