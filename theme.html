@@ -11,8 +11,10 @@
     <body bgcolor="#000000" text="#FFFFFF" background="http://static.tumblr.com/uovukmx/xh9mhx0g1/stars-bb.gif">
         <center><h1><a href="/" color="#FFFFFF" style='text-decoration:none; color: #ffffff'>{Title}</a></h1>
 
+        <img src="{PortraitURL-128}">
         {block:Description}
-            <p><img src="{PortraitURL-128}"><br>{Description}</p>
+            
+            <marquee>{Description}</marquee>
         {/block:Description}
 
         {block:AskEnabled}
