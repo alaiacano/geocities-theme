@@ -13,8 +13,9 @@
 
         <img src="{PortraitURL-128}">
         {block:Description}
-            
+            <center><div style="max-width:500px">
             <marquee>{Description}</marquee>
+            </div></center>
         {/block:Description}
 
         {block:AskEnabled}
@@ -52,7 +53,7 @@
                 {/block:Text}
 
                 {block:Photo}
-                        <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" style='max-width: 600px;'>
+                        <center>{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" style='max-width: 600px;'>{LinkCloseTag}</center>
 
                         {block:Caption}
                             <div class="caption">{Caption}</div>
@@ -74,7 +75,7 @@
 
                 {block:Photoset}
 
-                        {Photoset-500}
+                        <center>{Photoset-500}</center>
 
                         {block:Caption}
                             <div class="caption">{Caption}</div>
@@ -142,13 +143,20 @@
 
                 {/block:Audio}
             </td></tr>
-            <tr><td colspan=2>
-            {block:PermalinkPage} 
-            {block:PostNotes}
-            {PostNotes-16}
-            {/block:PostNotes}
-            {/block:PermalinkPage} 
+            <tr><td colspan=2 align="right">
+                {block:HasTags}
+                    {block:Tags}
+                        <blink><a href="{TagURL}">#{Tag}</a></blink>&nbsp;&nbsp;
+                    {/block:Tags}
+                {/block:HasTags}
             </td></tr>
+            {block:PermalinkPage} 
+            <tr><td colspan=2 align="center">
+                {block:PostNotes}
+                    {PostNotes-16}
+                {/block:PostNotes}
+            </td></tr>
+            {/block:PermalinkPage} 
             </table>
             <br><br>
             {/block:Posts}
