@@ -1,6 +1,7 @@
 <html>
     <head>
         <meta name="text:Google Analytics Code" content=""/>
+        <meta name="text:Web Counter" countent=""/>
         <title>{Title}</title>
         <link rel="shortcut icon" href="{Favicon}">
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
@@ -53,7 +54,7 @@
                 {/block:Text}
 
                 {block:Photo}
-                        <center>{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" style='max-width: 600px;'>{LinkCloseTag}</center>
+                        <center>{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">{LinkCloseTag}</center>
 
                         {block:Caption}
                             <div class="caption">{Caption}</div>
@@ -177,10 +178,13 @@
             </center>
         </p>
 
+{block:IfWebCounter}
 <!-- hitwebcounter Code START -->
 <a href="http://www.hitwebcounter.com/" target="_blank">
-<img src="http://hitwebcounter.com/counter/counter.php?page=4726123&style=0005&nbdigits=5&type=page&initCount=0" title="" Alt=""   border="0" >
+<img src="http://hitwebcounter.com/counter/counter.php?page={text:Web Counter}&style=0005&nbdigits=5&type=page&initCount=0" title="" Alt=""   border="0" >
 </a>
+{/block:IfWebCounter}
+
 {block:IfGoogleAnalyticsCode}
 <script type="text/javascript">
   var _gaq = _gaq || [];
