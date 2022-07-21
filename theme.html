@@ -9,8 +9,10 @@
             <meta name="description" content="{MetaDescription}" />
         {/block:Description}
     </head>
-    <body bgcolor="#000000" text="#FFFFFF" background="http://static.tumblr.com/uovukmx/xh9mhx0g1/stars-bb.gif">
-        <center><h1><a href="/" color="#FFFFFF" style='text-decoration:none; color: #ffffff'>{Title}</a></h1>
+    <body bgcolor="#000000" text="#FFFFFF" background="https://static.tumblr.com/uovukmx/xh9mhx0g1/stars-bb.gif">
+        <center>
+        <img src={HeaderImage}></img>
+        <h1><a href="/" color="#FFFFFF" style='text-decoration:none; color: #ffffff'>{Title}</a></h1>
 
         <img src="{PortraitURL-128}">
         {block:Description}
@@ -20,7 +22,7 @@
         {/block:Description}
 
         {block:AskEnabled}
-            <a href="/ask"><img src="http://static.tumblr.com/uovukmx/sXYmhx13s/emailme.gif"> {AskLabel}</a>
+            <a href="/ask"><img src="https://static.tumblr.com/uovukmx/sXYmhx13s/emailme.gif"> {AskLabel}</a>
         {/block:AskEnabled}
         </center>
 
@@ -35,7 +37,7 @@
                     <p>
                     <script>
                         if ({NoteCount} > 100) {
-                            document.write('HOT POST<br><img src="http://static.tumblr.com/uovukmx/pVpmhx34t/fire.gif">');
+                            document.write('HOT POST<br><img src="https://static.tumblr.com/uovukmx/pVpmhx34t/fire.gif">');
                         }
                     </script>
                     {/block:NotReblog} 
@@ -174,14 +176,14 @@
             {/block:NextPage}
             <br><br>
             <h3><a href="/archive">Archive</a></h3>
-            <a href="/"><img src="http://static.tumblr.com/uovukmx/cXumhx240/home.gif"></a>
+            <a href="/"><img src="https://static.tumblr.com/uovukmx/cXumhx240/home.gif"></a>
             </center>
         </p>
 
 {block:IfWebCounter}
 <!-- hitwebcounter Code START -->
-<a href="http://www.hitwebcounter.com/" target="_blank">
-<img src="http://hitwebcounter.com/counter/counter.php?page={text:Web Counter}&style=0005&nbdigits=5&type=page&initCount=0" title="" Alt=""   border="0" >
+<a href="https://www.hitwebcounter.com/" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page={text:Web Counter}&style=0005&nbdigits=5&type=page&initCount=0" title="" Alt=""   border="0" >
 </a>
 {/block:IfWebCounter}
 
@@ -193,7 +195,7 @@
 
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
